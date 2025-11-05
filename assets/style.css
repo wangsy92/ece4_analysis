@@ -80,14 +80,9 @@ h2 {
   align-items: center;
 }
 #lightbox img {
-  margin: auto;
-  display: block;
   max-width: 90%;
   max-height: 85%;
   border-radius: 10px;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 #lightbox span {
   position: absolute;
