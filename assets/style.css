@@ -66,7 +66,7 @@ h2 {
   overflow: hidden;
 }
 
-/* Lightbox - Fixed Arrow Positioning */
+/* Lightbox */
 #lightbox {
   display: none;
   position: fixed;
@@ -80,11 +80,16 @@ h2 {
   align-items: center;
 }
 #lightbox img {
+  margin: auto;
+  display: block;
   max-width: 90%;
   max-height: 85%;
   border-radius: 10px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
-#lightbox span.close {
+#lightbox span {
   position: absolute;
   top: 20px;
   right: 40px;
@@ -102,17 +107,10 @@ h2 {
   font-weight: bold;
   cursor: pointer;
   user-select: none;
-  padding: 20px;
-  z-index: 1001;
-  transition: background-color 0.2s;
 }
 .lightbox-arrow.left {
-  left: 20px;
+  left: 40px;
 }
 .lightbox-arrow.right {
-  right: 20px;
-}
-.lightbox-arrow:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
+  right: 40px;
 }
