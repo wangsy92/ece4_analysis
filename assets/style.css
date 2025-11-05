@@ -84,7 +84,7 @@ h2 {
   max-height: 85%;
   border-radius: 10px;
 }
-#lightbox span {
+#lightbox span.close {
   position: absolute;
   top: 20px;
   right: 40px;
