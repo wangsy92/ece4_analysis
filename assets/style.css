@@ -77,6 +77,11 @@ h2 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.85);
   overflow: hidden;
+
+  /* NEW: enable flexbox centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #lightbox img {
@@ -85,10 +90,6 @@ h2 {
   max-width: 90%;
   max-height: 85%;
   border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 #lightbox span {
@@ -127,4 +128,12 @@ h2 {
 
 .lightbox-arrow.right {
   right: 40px;
+}
+
+/* ===========================
+   Misc
+   =========================== */
+button.active,
+.collapsible:hover {
+  background-color: #cbd5e1;
 }
