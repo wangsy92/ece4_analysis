@@ -1,14 +1,10 @@
 
-/* ===========================
-   General layout
-   =========================== */
 body {
   font-family: 'Segoe UI', Roboto, sans-serif;
   background-color: #f8fafc;
   margin: 0;
   color: #333;
 }
-
 .navbar {
   background-color: #1e293b;
   color: white;
@@ -17,44 +13,34 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 .nav-links a {
   color: #e5e7eb;
   margin: 0 8px;
   text-decoration: none;
 }
-
 .nav-links a:hover {
   color: #93c5fd;
 }
-
 h2 {
   margin-top: 1.5rem;
   border-bottom: 2px solid #ccc;
   padding-bottom: 0.3rem;
 }
-
-/* ===========================
-   Gallery + Collapsible
-   =========================== */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin: 10px 0;
 }
-
 .gallery img {
   width: 280px;
   border-radius: 6px;
   cursor: pointer;
   transition: transform 0.2s;
 }
-
 .gallery img:hover {
   transform: scale(1.05);
 }
-
 .back-to-top {
   display: block;
   margin: 15px auto;
@@ -62,7 +48,6 @@ h2 {
   color: #2563eb;
   text-decoration: none;
 }
-
 .collapsible {
   background-color: #e2e8f0;
   border: none;
@@ -75,42 +60,31 @@ h2 {
   font-size: 1rem;
   border-radius: 4px;
 }
-
 .content {
   padding: 0 15px;
   display: none;
   overflow: hidden;
 }
 
-/* ===========================
-   Lightbox
-   =========================== */
+/* Lightbox - Fixed Arrow Positioning */
 #lightbox {
   display: none;
   position: fixed;
   z-index: 1000;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.85);
-  overflow: hidden;
-
-  /* ✅ Flexbox to center content vertically & horizontally */
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-
 #lightbox img {
-  display: block;
   max-width: 90%;
   max-height: 85%;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
-
-#lightbox span {
+#lightbox span.close {
   position: absolute;
   top: 20px;
   right: 40px;
@@ -119,41 +93,26 @@ h2 {
   font-weight: bold;
   cursor: pointer;
 }
-
-/* ===========================
-   Navigation Arrows
-   =========================== */
 .lightbox-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: #f1f1f1;
-  font-size: 60px;
+  font-size: 45px;
   font-weight: bold;
   cursor: pointer;
   user-select: none;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  transition: background-color 0.3s;
+  padding: 20px;
+  z-index: 1001;
+  transition: background-color 0.2s;
 }
-
-.lightbox-arrow:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
 .lightbox-arrow.left {
-  left: 40px;
+  left: 20px;
 }
-
 .lightbox-arrow.right {
-  right: 40px;
+  right: 20px;
 }
-
-/* ===========================
-   Misc
-   =========================== */
-button.active,
-.collapsible:hover {
-  background-color: #cbd5e1;
+.lightbox-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
