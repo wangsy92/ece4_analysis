@@ -129,11 +129,3 @@ h2 {
 .lightbox-arrow.right {
   right: 40px;
 }
-
-/* ===========================
-   Misc
-   =========================== */
-button.active,
-.collapsible:hover {
-  background-color: #cbd5e1;
-}
