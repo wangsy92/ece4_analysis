@@ -23,6 +23,14 @@ body {
   padding-top: 1rem;
 }
 
+/* Logo in sidebar */
+.sidebar img.logo {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
 .sidebar h1 {
   font-size: 1.1rem;
   text-align: center;
