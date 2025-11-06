@@ -140,11 +140,11 @@ function openLightbox(imgSrc, gallery) {
   currentGallery = Array.from(document.querySelectorAll('.' + gallery + ' img'));
   currentIndex = currentGallery.findIndex(img => img.src.includes(imgSrc.split('/').pop()));
   document.getElementById("lightbox-img").src = imgSrc;
-  document.getElementById("lightbox").style.display = "block";
+  document.getElementById("lightbox").classList.add("active");
 }
 
 function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
+  document.getElementById("lightbox").classList.remove("active");
 }
 
 function changeImage(direction) {
