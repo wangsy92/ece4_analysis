@@ -67,6 +67,35 @@ body {
   color: #93c5fd;
 }
 
+/* Clickable logo + title group */
+.sidebar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar a:hover {
+  text-decoration: none;
+}
+
+/* Title styling */
+.sidebar-title {
+  font-size: 1.05rem;
+  text-align: center;
+  margin: 8px 0 15px;
+  color: white;
+}
+
+/* Logo + title hover group */
+.sidebar a:hover .logo {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar a:hover .sidebar-title {
+  color: #93c5fd;
+  text-shadow: 0 0 6px rgba(147, 197, 253, 0.5);
+}
+
 /* Main content */
 .main-content {
   margin-left: 260px;
