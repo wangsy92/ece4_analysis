@@ -154,3 +154,10 @@ h2 {
 }
 .lightbox-arrow.left { left: 40px; }
 .lightbox-arrow.right { right: 40px; }
+/* Logo */
+.logo {
+  display: block;
+  margin: 20px auto;
+  max-width: 200px;
+  height: auto;
+}
