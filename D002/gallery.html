@@ -9,18 +9,15 @@
 </head>
 <body>
 
-<div class="navbar">
-  <h1>EC-Earth / OptimESM Diagnostics</h1>
-  <div class="nav-links">
-    <a href="../index.html">Home</a>
-    <a href="../D001/gallery.html">D001</a> <a href="../D002/gallery.html" style="color:#93c5fd;">D002</a>
-  </div>
+<div class="sidebar">
+  <h1>EC-Earth / OptimESM</h1>
+  <a href="../index.html">🏠 Home</a>
+  <a href="../D001/gallery.html" style="">D001</a><a href="../D002/gallery.html" style="background-color:#334155;">D002</a>
 </div>
 
-
-<h2>D002 Diagnostics</h2>
-
-
+<div class="main-content">
+  <h2>D002 Diagnostics</h2>
+  
 <button class="collapsible">Ecmean</button>
 <div class="content">
   <div class="gallery ecmean-gallery">
@@ -112,10 +109,11 @@
   <a href="#top" class="back-to-top">⬆ Back to top</a>
 </div>
 
+</div>
 
 <!-- Lightbox -->
 <div id="lightbox">
-  <span class="close" onclick="closeLightbox()">&times;</span>  <!-- Added class="close" -->
+  <span class="close" onclick="closeLightbox()">&times;</span>
   <span class="lightbox-arrow left" onclick="changeImage(-1)">&#10094;</span>
   <img id="lightbox-img" src="">
   <span class="lightbox-arrow right" onclick="changeImage(1)">&#10095;</span>
@@ -132,7 +130,7 @@ for (var i = 0; i < coll.length; i++) {
   });
 }
 
-// Lightbox navigation
+// Lightbox with navigation
 var currentIndex = 0;
 var currentGallery = [];
 
@@ -153,15 +151,13 @@ function changeImage(direction) {
   document.getElementById("lightbox-img").src = currentGallery[currentIndex].src;
 }
 
-// Keyboard shortcuts
 document.addEventListener('keydown', function(e) {
-  if (document.getElementById("lightbox").style.display === "block") {
+  if (document.getElementById("lightbox").classList.contains("active")) {
     if (e.key === "ArrowLeft") changeImage(-1);
     if (e.key === "ArrowRight") changeImage(1);
     if (e.key === "Escape") closeLightbox();
   }
 });
 </script>
-
 </body>
 </html>
